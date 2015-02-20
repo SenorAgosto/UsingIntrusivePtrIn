@@ -6,10 +6,16 @@ This is a header only convenince library wrapping boost::intrusive_ptr into a mi
     // defaults to std::atomic<std::size_t>
     class MyType : public UsingIntrusivePtrIn<MyType>
     {
+    public:
+        // ... snip ... 
     };
 
     // create an intrusive pointer to MyType.
     MyType::smartptr t = new MyType();
+
+## Dependencies 
+
+Uses boost/intrusive_ptr.hpp, assumes boost/ is in your include path.
 
 ## Maintainer 
 
