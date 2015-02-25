@@ -1,6 +1,8 @@
 # UsingIntrusivePtrIn 
 
-This is a header only convenince library wrapping boost::intrusive_ptr into a mixin class. The mixin provides the ability to set the reference count type using a policy. There is also a policy to provide debugging hooks. 
+This is a header only convenince library wrapping boost::intrusive_ptr into a mixin class. 
+
+The mixin prevents you from having to write `intrusive_ptr_add_ref()` and `intrusive_ptr_release()` over and over again.
 
     // Using the mixin, reference count type 
     // defaults to std::atomic<std::size_t>
@@ -12,6 +14,8 @@ This is a header only convenince library wrapping boost::intrusive_ptr into a mi
 
     // create an intrusive pointer to MyType.
     MyType::smartptr t = new MyType();
+
+The mixin also provides the ability to set the reference count type using a policy. There is also a policy to provide debugging hooks. 
 
 ## Dependencies 
 
