@@ -1,6 +1,6 @@
 # UsingIntrusivePtrIn 
 
-This is a header only convenince library wrapping boost::intrusive_ptr into a mixin class. 
+This is a header only convenience library wrapping boost::intrusive_ptr into a mixin class. 
 
 The mixin prevents you from having to write `intrusive_ptr_add_ref()` and `intrusive_ptr_release()` over and over again.
 
