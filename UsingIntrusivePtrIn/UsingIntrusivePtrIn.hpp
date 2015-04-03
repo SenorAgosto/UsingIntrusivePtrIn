@@ -13,8 +13,6 @@ namespace UsingIntrusivePtrIn {
     template<class Derived, class ReferenceCountBase = details::ThreadSafeReferenceCountBase, template<class Derived2, class ReferenceCountBase2> class DebugPolicy = details::NullIntrusivePtrDebugPolicy>
     struct UsingIntrusivePtrIn : virtual protected ReferenceCountBase
     {
-        using smartptr = boost::intrusive_ptr<Derived>;
-        
         friend inline void intrusive_ptr_add_ref(const Derived* d)
         {
             debug.BeforeReferenceCountIncrement(d, (const ReferenceCountBase*) d);
