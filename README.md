@@ -9,6 +9,8 @@ The mixin prevents you from having to write `intrusive_ptr_add_ref()` and `intru
     class MyType : public UsingIntrusivePtrIn<MyType>
     {
     public:
+        using smartptr = UsingIntrusivePtrIn::Handle<MyType>;
+        
         // ... snip ... 
     };
 
