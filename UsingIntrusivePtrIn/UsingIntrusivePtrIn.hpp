@@ -48,5 +48,5 @@ namespace UsingIntrusivePtrIn {
 
     // initialize the static variable.
     template<class Derived, class ReferenceCountBase, template<class Derived2, class ReferenceCountBase2> class DebugPolicy>
-    DebugPolicy<Derived, ReferenceCountBase> UsingIntrusivePtrIn<Derived, ReferenceCountBase, DebugPolicy>::debug = DebugPolicy<Derived, ReferenceCountBase>();
+    typename UsingIntrusivePtrIn<Derived, ReferenceCountBase, DebugPolicy>::DebugPolicyType UsingIntrusivePtrIn<Derived, ReferenceCountBase, DebugPolicy>::debug = typename UsingIntrusivePtrIn<Derived, ReferenceCountBase, DebugPolicy>::DebugPolicyType();
 }
