@@ -17,7 +17,7 @@ namespace UsingIntrusivePtrIn { namespace details {
         {
         }
         
-        ThreadSafeReferenceCountBase(ThreadSafeReferenceCountBase&& base)
+        ThreadSafeReferenceCountBase(ThreadSafeReferenceCountBase&&)
             : referenceCount_(0)
         {
         }

@@ -21,3 +21,4 @@ namespace UsingIntrusivePtrIn { namespace details {
     };
 
 }}
+

@@ -13,3 +13,4 @@ namespace UsingIntrusivePtrIn { namespace details {
 
     typedef CacheLinePadImpl<CacheLineSize> CacheLinePad;
 }}
+
