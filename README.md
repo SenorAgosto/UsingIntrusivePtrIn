@@ -30,3 +30,8 @@ Austin Gilbert  <ceretullis@gmail.com>
 ## License
 
 4-Clause BSD License, see LICENSE.md for details. Other licensing available on request.
+
+## References 
+
+[Peter Weinert, "A Base Class for Intrusively Reference-Counted Objects in C++".](http://www.drdobbs.com/cpp/a-base-class-for-intrusively-reference-c/229218807)
+
