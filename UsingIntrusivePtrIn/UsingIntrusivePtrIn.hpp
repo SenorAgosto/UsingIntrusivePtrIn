@@ -25,18 +25,19 @@ namespace UsingIntrusivePtrIn {
         friend inline void intrusive_ptr_release(const Derived* d)
         {
             debug.BeforeReferenceCountDecrement(d, static_cast<const ReferenceCountBase*>(d));
-            
-            --static_cast<const ReferenceCountBase*>(d)->referenceCount_;
-            
-            debug.AfterReferenceCountDecrement(d, static_cast<const ReferenceCountBase*>(d));
-            
-            if( 0 == static_cast<const ReferenceCountBase*>(d)->referenceCount_)
+
+            if( 0 == --static_cast<const ReferenceCountBase*>(d)->referenceCount_)
             {
+                debug.AfterReferenceCountDecrement(d, static_cast<const ReferenceCountBase*>(d));
                 debug.BeforeDelete(d, static_cast<const ReferenceCountBase*>(d));
                 
                 delete d;
                 
                 debug.AfterDelete();
+            }
+            else
+            {
+                debug.AfterReferenceCountDecrement(d, static_cast<const ReferenceCountBase*>(d));
             }
         }
 
