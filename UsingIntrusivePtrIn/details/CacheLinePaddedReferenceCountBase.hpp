@@ -21,7 +21,7 @@ namespace UsingIntrusivePtrIn { namespace details {
         {
         }
         
-        CacheLinePaddedReferenceCountBase(CacheLinePaddedReferenceCountBase&& base)
+        CacheLinePaddedReferenceCountBase(CacheLinePaddedReferenceCountBase&&)
             : referenceCount_(0)
         {
         }
